@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <link
+      rel="stylesheet"
+      href="/node_modules/jquery-ripple/jquery.ripple.css"
+    />
+
+    <!-- ! Jquery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+      integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"
+      integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="/node_modules/jquery-ripple/jquery.ripple.js"
+      type="text/javascript"
+    ></script>
+    <title>Sign Up | LibraryKU</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="img-side"></div>
+      <div id="wrapper-page">
+        <div class="login-card" id="signup-page">
+          <h2>SIGN UP</h2>
+          <h3>
+            Already have account? <span class="btn" id="toLogin">Login</span>
+          </h3>
+          <form class="login-form">
+            <div class="name-wrapper">
+              <input
+                id="firstNameField"
+                spellcheck="false"
+                class="control"
+                type="text"
+                placeholder="First Name"
+              />
+              <input
+                id="lastNameField"
+                spellcheck="false"
+                class="control"
+                type="text"
+                placeholder="Last Name"
+              />
+            </div>
+            <div class="date-picker-wrapper">
+              <label for="datepicker">Birth Date</label>
+              <input
+                id="datepicker"
+                class="control"
+                type="date"
+                placeholder="Birth Date"
+              />
+            </div>
+            <div class="username">
+              <input
+                id="usernameField"
+                spellcheck="false"
+                class="control"
+                type="text"
+                placeholder="Username"
+                onkeyup="handleChange(event)"
+                onkeydown="handleStartTyping()"
+              />
+              <div id="spinner" class="spinner"></div>
+            </div>
+            <div id="alert" class="alert">Username already exists</div>
+            <input
+              id="emailField"
+              spellcheck="false"
+              class="control"
+              type="email"
+              placeholder="Email"
+            />
+            <input
+              spellcheck="false"
+              class="control"
+              id="passwordField"
+              type="password"
+              placeholder="Password"
+            />
+            <button class="control btn" type="button" data-ripple>
+              SIGN UP
+            </button>
+          </form>
+        </div>
+        <div class="login-card" id="login-page">
+          <h2>LOGIN</h2>
+          <h3>
+            Don't have account?
+            <span class="btn" id="toSignUp">Create account</span>
+          </h3>
+          <form class="login-form">
+            <div class="username2">
+              <input
+                id="usernameLogin"
+                spellcheck="false"
+                class="control"
+                type="text"
+                placeholder="Username"
+                onkeyup="handleChange(event)"
+                onkeydown="handleStartTyping()"
+              />
+              <div id="spinner2" class="spinner"></div>
+            </div>
+            <div id="alert2" class="alert">Username does not exists</div>
+            <input
+              spellcheck="false"
+              class="control"
+              id="passLogin"
+              type="password"
+              placeholder="Password"
+            />
+            <button class="control btn" type="button" data-ripple>Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="/script/main.js" type="text/javascript"></script>
+  </body>
+</html>
